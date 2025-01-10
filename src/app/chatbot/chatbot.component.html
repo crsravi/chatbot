@@ -1,0 +1,56 @@
+<!-- <div class="chatbot-icon" (click)="toggleChatbox()">
+  <mat-icon aria-hidden="false" fontIcon="chat"></mat-icon>
+</div>
+
+<div class="chatbox" [ngClass]="{ open: chatboxOpen }">
+    <div class="header">
+      <h2>Policy Bot!</h2>
+    </div>
+    <app-conversation class="chatbox-conversation" [messages]="messages"></app-conversation>
+    <div class="footer">
+      <app-prompt (textChange)="handlePromptChange($event)"></app-prompt>
+    </div>
+</div> -->
+
+<div style="height: 80vh;">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <img src="/images/state-street-logo-final.svg" style="width: 150px;height: 41px;">
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        <a href="#" mat-list-item>Menu Item 1</a>
+        <a href="#" mat-list-item>Menu Item 2</a>
+        <a href="#" mat-list-item>Menu Item 3</a>
+        <a href="#" mat-list-item>Menu Item 4</a>
+        <a href="#" mat-list-item>Menu Item 5</a>
+        <a href="#"mat-list-item>Menu Item 6</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill style="padding-left: 100px;padding-top: 10px;">
+      <div>
+        <h1 style="font-size: 1.75rem;color: #001aff; font-family:'LabAntiqua',Arial,'sans-serif'">Star compliance</h1>
+      </div>
+      <div class="chatbot-icon" (click)="toggleChatbox()">
+        <mat-icon aria-hidden="false" fontIcon="chat"></mat-icon>
+      </div>
+      
+      <div class="chatbox" [ngClass]="{ open: chatboxOpen }">
+          <div class="header">
+            <h2>Policy Bot!</h2>
+          </div>
+          <app-conversation class="chatbox-conversation" [messages]="messages"></app-conversation>
+          <div class="footer">
+            <app-prompt (textChange)="handlePromptChange($event)"></app-prompt>
+          </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
